@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:cpv="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.tao.circlepercentview.MainActivity">
+
+    <com.tao.circlepercentview.CirclePercentView
+        android:id="@+id/circlePercentView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        cpv:arcColor="#ffee00"
+        cpv:arcWidth="@dimen/activity_horizontal_margin"
+        cpv:circleBg="#8e29fa"
+        cpv:percentTextColor="#ffee00"
+        cpv:percentTextSize="16sp"
+        cpv:radius="100dp"  />
+    
+</RelativeLayout>
