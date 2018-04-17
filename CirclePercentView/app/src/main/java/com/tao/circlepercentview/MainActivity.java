@@ -110,7 +110,7 @@ public class MainActivity extends AppCompatActivity {
                             @Override
                             public void afterTextChanged(Editable editable) {
                                 Log.i("aaaaa", "after：" + editable);
-                                code = editable.toString();
+                                code = editable.toString().trim();
                             }
                         })
                         .build();
