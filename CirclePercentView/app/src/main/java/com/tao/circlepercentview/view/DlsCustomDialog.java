@@ -3,10 +3,12 @@ package com.tao.circlepercentview.view;
 import android.app.Dialog;
 import android.content.Context;
 import android.os.Bundle;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.EditText;
 
 import com.tao.circlepercentview.utils.DensityUtil;
 
@@ -70,6 +72,7 @@ public class DlsCustomDialog extends Dialog {
         private int resStyle = -1;
         private int gravityPosition;//出现的位置
         private int animations;//出现动画
+        private EditText editText;
 
         public Builder(Context context) {
             this.context = context;
@@ -146,6 +149,11 @@ public class DlsCustomDialog extends Dialog {
             return this;
         }
 
+        public Builder addViewTextChanged(int viewRes, TextWatcher watcher){
+            editText = (EditText) view.findViewById(viewRes);
+            editText.addTextChangedListener(watcher);
+            return this;
+        }
 
         public DlsCustomDialog build() {
             if (resStyle != -1) {
